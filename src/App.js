@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+//rcc (react class component)
+import React, { Component } from 'react'
+import BTHomePage from './Components/BTHomePage/BTHomePage'
+import Databinding from './Databinding/Databinding'
+import HandleEvent from './HandleEvent/HandleEvent'
+import ComponentWithStyle from './ComponentWithStyle/ComponentWithStyle'
+//css
+import './assets/styles/styles.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+
+    render() {
+        return (
+            <div>
+                {/* <BTHomePage /> */}
+                {/* <Databinding /> */}
+                {/* <HandleEvent /> */}
+                <ComponentWithStyle />
+                {/* <p className='color-dark-blue'>123</p> */}
+            </div>
+        )
+    }
 }
-
-export default App;
