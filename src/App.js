@@ -9,7 +9,10 @@ import './assets/styles/styles.css'
 import ComponentWithState from './ComponentWithState/ComponentWithState'
 import RenderWithMap from './RenderWithMap/RenderWithMap'
 import BaiTap from './BaiTap/BaiTap'
-
+import DemoProps from './Props/DemoProps/DemoProps'
+import ListProduct from './Props/ShoesShop/ListProduct'
+import { dataProduct } from './data/dataProduct'
+import PhoneDetail from './Props/PhoneDetail/PhoneDetail'
 export default class App extends Component {
 
     render() {
@@ -23,7 +26,10 @@ export default class App extends Component {
                 {/* <p className='color-dark-blue'>123</p> */}
                 {/* <ComponentWithState /> */}
                 {/* <RenderWithMap /> */}
-                <BaiTap />
+                {/* <BaiTap /> */}
+                {/* <DemoProps /> */}
+                {/* <ListProduct arrProduct={dataProduct} /> */}
+                <PhoneDetail />
             </div>
         )
     }
