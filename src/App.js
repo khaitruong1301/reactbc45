@@ -13,24 +13,34 @@ import DemoProps from './Props/DemoProps/DemoProps'
 import ListProduct from './Props/ShoesShop/ListProduct'
 import { dataProduct } from './data/dataProduct'
 import PhoneDetail from './Props/PhoneDetail/PhoneDetail'
+import BaiTapGioHang from './Props/BaiTapGioHang/BaiTapGioHang';
+
+//Cấu hình router
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import About from './pages/About'
+import Header from './Components/Header/Header'
+import HomeTeamplate from './templates/HomeTeamplate'
 export default class App extends Component {
 
     render() {
         return (
-            <div>
-                {/* <p>12377216378612</p> */}
-                {/* <BTHomePage /> */}
-                {/* <Databinding /> */}
-                {/* <HandleEvent /> */}
-                {/* <ComponentWithStyle /> */}
-                {/* <p className='color-dark-blue'>123</p> */}
-                {/* <ComponentWithState /> */}
-                {/* <RenderWithMap /> */}
-                {/* <BaiTap /> */}
-                {/* <DemoProps /> */}
-                {/* <ListProduct arrProduct={dataProduct} /> */}
-                <PhoneDetail />
-            </div>
+            <BrowserRouter>
+
+                <Routes>
+                    <Route path='' element={<HomeTeamplate />} >
+                        <Route index element={<Home />}></Route>
+                        <Route path="home" element={<Home />}></Route>
+                        <Route path="login" element={<Login />}></Route>
+                        <Route path="about" element={<About />}></Route>
+
+                    </Route>
+                    <Route path='*' element={<Navigate to={'/'} />}></Route>
+                </Routes>
+
+
+            </BrowserRouter>
         )
     }
 }
