@@ -19,6 +19,9 @@ export default class Header extends Component {
                         <li className="nav-item">
                             <NavLink className={({isActive})=> isActive ? 'nav-link bg-white text-dark' : 'nav-link' } style={({isActive}) => isActive ? {border:'1px solid orange'} : {} } to="/login">Login</NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink className={({isActive})=> isActive ? 'nav-link bg-white text-dark' : 'nav-link' } style={({isActive}) => isActive ? {border:'1px solid orange'} : {} } to="/form">Form</NavLink>
+                        </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                             <div className="dropdown-menu" aria-labelledby="dropdownId">

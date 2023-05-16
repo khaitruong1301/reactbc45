@@ -22,6 +22,7 @@ import Login from './pages/Login'
 import About from './pages/About'
 import Header from './Components/Header/Header'
 import HomeTeamplate from './templates/HomeTeamplate'
+import ProductManagement from './pages/DemoFrom/ProductManagement'
 export default class App extends Component {
 
     render() {
@@ -34,7 +35,7 @@ export default class App extends Component {
                         <Route path="home" element={<Home />}></Route>
                         <Route path="login" element={<Login />}></Route>
                         <Route path="about" element={<About />}></Route>
-
+                        <Route path="form" element={<ProductManagement />}></Route>
                     </Route>
                     <Route path='*' element={<Navigate to={'/'} />}></Route>
                 </Routes>
