@@ -23,6 +23,8 @@ import About from './pages/About'
 import Header from './Components/Header/Header'
 import HomeTeamplate from './templates/HomeTeamplate'
 import ProductManagement from './pages/DemoFrom/ProductManagement'
+import LifeCycleDemo from './pages/LifeCycleDemo/LifeCycleDemo'
+import DetailProduct from './pages/LifeCycleDemo/DetailProduct'
 export default class App extends Component {
 
     render() {
@@ -35,7 +37,11 @@ export default class App extends Component {
                         <Route path="home" element={<Home />}></Route>
                         <Route path="login" element={<Login />}></Route>
                         <Route path="about" element={<About />}></Route>
+                        <Route path="detail" >
+                            <Route path=':id' element={<DetailProduct />}></Route>
+                        </Route>
                         <Route path="form" element={<ProductManagement />}></Route>
+                        <Route path="lifecycle" element={<LifeCycleDemo />}></Route>
                     </Route>
                     <Route path='*' element={<Navigate to={'/'} />}></Route>
                 </Routes>
