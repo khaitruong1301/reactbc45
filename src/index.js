@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client';
 import Navigation from './Components/Navigation';
 import Card from './Components/Card';
 import App from './App';
-
+//Cấu hình redux
+import { Provider } from 'react-redux';
+import { store } from './redux/configStore';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,5 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
 root.render(
-    <App />
+    <Provider store={store}>
+        <App />
+    </Provider>
 );

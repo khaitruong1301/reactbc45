@@ -23,6 +23,9 @@ import About from './pages/About'
 import Header from './Components/Header/Header'
 import HomeTeamplate from './templates/HomeTeamplate'
 import ProductManagement from './pages/DemoFrom/ProductManagement'
+import DemoRedux from './DemoRedux/DemoRedux'
+import TangGiamFontSize from './DemoRedux/TangGiamFontSize'
+import DemoRegister from './DemoRedux/DemoRegister/DemoRegister'
 export default class App extends Component {
 
     render() {
@@ -36,6 +39,9 @@ export default class App extends Component {
                         <Route path="login" element={<Login />}></Route>
                         <Route path="about" element={<About />}></Route>
                         <Route path="form" element={<ProductManagement />}></Route>
+                        <Route path="demo-redux" element={<DemoRedux />}></Route>
+                        <Route path="demo-redux1" element={<TangGiamFontSize />}></Route>
+                        <Route path="demo-redux2" element={<DemoRegister />}></Route>
                     </Route>
                     <Route path='*' element={<Navigate to={'/'} />}></Route>
                 </Routes>
