@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-//component thay thế thẻ a trong react router dom
+import { connect } from 'react-redux'
 import {NavLink} from 'react-router-dom'
-
-export default class Header extends Component {
+ class Header extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -32,12 +31,29 @@ export default class Header extends Component {
                         </li>
                     </ul>
                     <form className="d-flex my-2 my-lg-0">
-                        <input className="form-control me-sm-2" type="text" placeholder="Search" />
-                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                       <NavLink to="/cart">
+                            <i className='fa fa-cart-plus text-white fs-4'>({this.props.cart.length} - {this.tinhTongTien()})</i> 
+                       </NavLink>
                     </form>
                 </div>
             </nav>
 
         )
     }
+
+    tinhTongTien = () => {
+        let tongTien = 0;
+        for(let item of this.props.cart){
+            tongTien += item.quantity * item.price;
+        }
+        return tongTien.toLocaleString();
+    }
 }
+
+const mapStateToProps = (state) => ({
+    cart:state.cartReducer.gioHang
+})
+
+
+
+export default connect(mapStateToProps)(Header)
